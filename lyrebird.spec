@@ -1,21 +1,21 @@
 Name:          lyrebird
 Summary:       Simple and powerful voice changer for Linux, written in GTK 3.
-URL:           https://github.com/lyrebird-voice-changer/%{name}
-
-Version:       1.1.0
-Release:       4%{dist}
+Version:       1.2.0
+Release:       1
 License:       MIT
-
-Source0:       %{URL}/archive/v%{version}.tar.gz
+Group:         Sound
+URL:           https://github.com/lyrebird-voice-changer/%{name}
+Source0:       %{URL}/archive/v%{version}/%{name}-%{version}.tar.gz
 BuildArch:     noarch
 
 BuildRequires: gettext
 
-Requires:      python3 >= 3.7.0
-Requires:      python3-toml
-Requires:      python3-gobject
-Requires:      pulseaudio
+Requires:      python
+Requires:      python3dist(toml)
+Requires:      python-gobject3
+Requires:      (pipewire or pulseaudio)
 Requires:      sox
+Requires:      pulseaudio-utils
 
 %description
 Simple and powerful voice changer for Linux, written in GTK 3.
